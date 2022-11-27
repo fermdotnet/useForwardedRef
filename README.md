@@ -1,4 +1,4 @@
-## Custom hook for react: useForwardedRef
+## A custom hook for react: useForwardedRef
 
 ### Demo (Codepen)
 
