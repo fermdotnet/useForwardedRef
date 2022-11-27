@@ -2,7 +2,7 @@
 
 ### Demo (Codepen)
 
---
+https://codepen.io/ferdotnet/pen/gOKKxNr
 
 ### Install
 
@@ -11,10 +11,14 @@
 ### How to use it?
 
 ```
-import React from 'react';
-import useForwardedRef from '@ferdotnet/use-forwarded-ref';
-
-export default () => {
-    ------
-};
+const Button = forwardRef(({ text }, ref) => {
+  const safeRef = useForwardedRef(ref);
+  useRipple(safeRef);
+  
+  return (
+    <button className="button" ref={safeRef as React.RefObject<HTMLButtonElement>}>
+      {text}
+    </button>
+  );
+});
 ```
